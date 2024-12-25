@@ -9,7 +9,7 @@ const PORT = 5000;
 const dotenv = require('dotenv');
 dotenv.config();
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/productdb', {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
